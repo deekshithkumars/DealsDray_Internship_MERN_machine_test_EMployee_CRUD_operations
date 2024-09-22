@@ -1,0 +1,73 @@
+<% layout('/layouts/boilerplate') -%>
+<body>
+    <br><br>
+    <div class="row">
+        <div class="col-8 offset-2">
+        <h2>Create Employee</h2>
+        <form method="POST" action="/listing" novalidate class="needs-validation" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name: </label>
+                <input type="text" placeholder="Enter name" name="listing[f_Name]" class="form-control" required>
+                <div class="invalid-feedback">
+                    Please enter Employee name!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email: </label>
+                <input type="email"  name="listing[f_Email]"  class="form-control" required>
+                <div class="invalid-feedback">
+                    Please enter Employee Email!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="mobile_no" class="form-label">Mobile No: </label>
+                <input type="text"  name="listing[f_Mobile]"  class="form-control" required>
+                <div class="invalid-feedback">
+                    Please enter Employee Mobile no!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="designation" class="form-label">Designation: </label>
+                <select name="listing[f_Designation]" class="form-control" required>
+                    <option value="HR">HR</option>
+                    <option value="Manager">Manager</option>
+                    <option value="Sales">Sales</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="gender" class="form-label">Gender: </label>
+                <div class="form-check">
+                    <label for="male" class="form-check-label">Male </label>
+                    <input type="radio"  name="listing[f_Gender]"  class="form-control form-check-input" id="gender" value="Male" >
+                </div>
+                <div class="form-check">
+                    <label for="female" class="form-check-label">Female </label>
+                    <input type="radio"  name="listing[f_Gender]"  class="form-control form-check-input" id="gender" value="Female">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="course" class="form-label">Course: </label>
+                <div class="form-check">
+                    <label for="c1" class="form-check-label">BSC </label>
+                    <input type="checkbox"  name="listing[f_Course]"  class="form-control form-check-input" id="c1" value="BSC" >
+                </div>
+                <div class="form-check">
+                    <label for="c2" class="form-check-label">MCA </label>
+                    <input type="checkbox"  name="listing[f_Course]"  class="form-control form-check-input" id="c1" value="MCA">
+                </div>
+                <div class="form-check">
+                    <label for="c3" class="form-check-label">BCA </label>
+                    <input type="checkbox"  name="listing[f_Course]"  class="form-control form-check-input"  id="c1" value="BCA">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="imageLink" class="form-label">Upload Image File: </label>
+                <input type="file"  name="listing[image]" class="form-control" required>
+            </div>
+            <br>
+            <button class="btn btn-dark add-btn">Create</button>
+        </form>
+        </div>
+    </div>
+    <br><br>
+</body>

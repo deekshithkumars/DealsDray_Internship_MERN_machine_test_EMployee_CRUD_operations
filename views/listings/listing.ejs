@@ -1,0 +1,22 @@
+<% layout('/layouts/boilerplate') -%>
+<body>
+    <h2>Employee List</h2>
+    <!-- <form method="GET" action="/listing/new">
+        <button>create listing</button>
+    </form> -->
+        <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-1 row-cols-xs-1">
+            <% for(listing of allListings){%>
+                <a href="/listing/<%=listing._id%>" class="listing-link">
+                    <div class="card col listing-card">
+                        <img src="<%= listing.image.url %>" class="card-img-top" alt="listing image" style="height: 12rem;">
+                        <div class="card-img-overlay"></div>
+                        <div class="card-body">
+                        <b><p class="card-text"><%= listing.f_Name %></b><br>
+                            <%= listing.f_Designation %>
+                        </p>
+                        </div>
+                    </div>
+                </a>
+            <%}%>
+        </div>
+</body>

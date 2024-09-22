@@ -1,0 +1,35 @@
+<% layout('/layouts/boilerplate') -%>
+<body>
+    <br>
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h2><%=listing.f_Name%></h2>
+            <div class="card mt-4 listing-card">
+                <img src="<%=listing.image.url%>" class="card-img-top show-img" alt="listing image">
+                <div class="card-body">
+                  <p class="card-text">
+                    <br>
+                    <%=listing.f_Email%>
+                    <br>
+                    <%=listing.f_Mobile%>
+                    <br>
+                    <%=listing.f_Gender%>
+                    <br>
+                    <%=listing.f_Designation%>
+                  </p>
+                </div>
+            </div>
+            <div class="btns">
+                <form method="GET" action="/listing/<%=listing._id%>/edit">
+                    <button class="btn btn-dark edit-btn">edit</button>
+                </form>
+                <form method="POST" action="/listing/<%=listing._id%>?_method=DELETE">
+                    <button class="btn btn-dark offset-4">delete</button>
+                </form>
+            </div>
+            <hr>
+        </div>
+    </div>
+    <br><br>
+</body>
+
